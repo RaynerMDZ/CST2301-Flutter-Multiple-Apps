@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:merge_apps/businessCard/businessCard.dart';
 import 'package:merge_apps/calculator/calculatorView.dart';
+import 'package:merge_apps/guessingGame/guessingGame.dart';
 import 'package:merge_apps/imageGallery/imageGallery.dart';
 import 'package:merge_apps/iosColleges/data/collegeMockData.dart';
 import 'package:merge_apps/labLayout0/labLayout0.dart';
@@ -47,6 +48,7 @@ class MyApp extends StatelessWidget {
         '/tipCalculator' : (context) => TipCalculatorView(),
         '/temperatureCalculator' : (context) => TemperatureCalculator(),
         '/imageGallery' : (context) => ImageGallery(),
+        '/guessingGame' : (context) => GuessingGame(),
         });
   }
 }
@@ -108,7 +110,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   color: const Color(0xFFE84B00),
                   child: Text('imageGallery', style: TextStyle(color: Colors.black),),
                   onPressed: () => Navigator.pushNamed(context, '/imageGallery'),
-                ),
+                ),RaisedButton(
+                  color: const Color(0xFFE84B00),
+                  child: Text('guessingGame', style: TextStyle(color: Colors.black),),
+                  onPressed: () => Navigator.pushNamed(context, '/guessingGame'),
+                )
               ],
             ),
           ],
